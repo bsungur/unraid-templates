@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>jenkins-lts</Name>
+  <Repository>jenkins/jenkins:lts</Repository>
+  <Registry>https://hub.docker.com/r/jenkins/jenkins/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/jenkins/jenkins/</Support>
+  <Project/>
+  <Overview>The leading open source automation server   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8090]</WebUI>
+  <TemplateURL/>
+  <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1583369833</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>The leading open source automation server   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8090</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>50000</HostPort>
+        <ContainerPort>50000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/jenkins-lts</HostDir>
+      <ContainerDir>/var/jenkins_home</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="LISTEN_PORT" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8090</Config>
+  <Config Name="JNLP_PORT" Target="50000" Default="" Mode="tcp" Description="Container Port: 50000" Type="Port" Display="always" Required="false" Mask="false">50000</Config>
+  <Config Name="jenkins_home" Target="/var/jenkins_home" Default="/mnt/user/appdata/jenkins-lts" Mode="rw" Description="Container Path: /var/jenkins_home" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/jenkins-lts</Config>
+</Container>
